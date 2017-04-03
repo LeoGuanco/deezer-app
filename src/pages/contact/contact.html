@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 class="title">Consultas por Email</h1>
+  <ion-list>    
+    <ion-item>
+      <ion-label floating>Tu Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Comentario</ion-label>
+      <ion-textarea name="comentario"></ion-textarea>      
+    </ion-item>
+  </ion-list>
+
+  <button type="submit" ion-button block full icon-left>
+    <ion-icon name="send" ion-center></ion-icon>
+    Enviar
+  </button>
+</ion-content>
