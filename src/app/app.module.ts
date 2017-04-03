@@ -8,6 +8,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ProfilePage } from '../pages/profile/profile'
 import { PlaylistPage } from '../pages/playlist/playlist'
 import { SongsPage } from '../pages/songs/songs'
+import { UrbanPlayerComponent } from '../components/urban-player/urban-player';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SongsPage } from '../pages/songs/songs'
     TabsPage,
     ProfilePage,
     PlaylistPage,
-    SongsPage
+    SongsPage,
+    UrbanPlayerComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -33,7 +35,8 @@ import { SongsPage } from '../pages/songs/songs'
     TabsPage,
     ProfilePage,
     PlaylistPage,
-    SongsPage
+    SongsPage,
+    UrbanPlayerComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

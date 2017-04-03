@@ -29,9 +29,12 @@
         </ion-thumbnail>
         <h2>{{song.title}}</h2>
         <p>{{song.artist.name}} - {{song.album.title}}</p>
-        <audio controls>
+
+        <!-- <audio controls>
           <source src="{{ song.preview }}" type="">
-        </audio>
+        </audio> -->
+
+        <urban-player text="prueba"></urban-player>   
       </ion-item>
     </ion-list>
 </ion-content>
