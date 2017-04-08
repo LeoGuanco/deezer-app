@@ -17,24 +17,19 @@
 
 
 <ion-content padding>
+  
     <div class="user playlist" >
       <img src={{playlist.picture}} alt="">
       <h1>{{playlist.title}}</h1>
     </div>
 
-    <ion-list>
-      <ion-item *ngFor="let song of songs">
-        <ion-thumbnail item-left>
-          <img src={{song.album.cover}} alt="">
-        </ion-thumbnail>
-        <h2>{{song.title}}</h2>
-        <p>{{song.artist.name}} - {{song.album.title}}</p>
-
-        <!-- <audio controls>
-          <source src="{{ song.preview }}" type="">
-        </audio> -->
-
-        <urban-player text="prueba"></urban-player>   
-      </ion-item>
+    <ion-list>    
+      <urban-player *ngFor="let song of songs" 
+        [title] = "song.title"
+        [artist] = "song.artist.name"
+        [album] = "song.album.title"
+        [cover] = "song.album.cover"
+        [audioSrc] = "song.preview" 
+      ></urban-player>      
     </ion-list>
 </ion-content>
