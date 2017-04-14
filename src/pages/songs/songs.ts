@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { DeezerService } from '../../providers/deezer-service'
 /*
   Generated class for the Songs page.
@@ -16,14 +16,18 @@ export class SongsPage {
   public playlist : any;
   public songs: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public ds: DeezerService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ds: DeezerService, 
+              public loading: LoadingController) {
     this.playlist = navParams.get('playlist');
     this.songs = [];
   }
 
   ionViewDidLoad() {
+    let loader = this.loading.create();
+    loader.present();
     this.ds.getPlaylistSongs(this.playlist.id).subscribe( song => {
       this.songs = song.data;
+      loader.dismiss();
     })
   }
 
